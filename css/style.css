@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 6fr 1fr;
+    grid-template-rows: 10vh auto 5vh;
+    grid-template-areas: 
+    'hd hd hd'
+    'as mn nv'
+    'ft ft ft';
+    gap: 5px;
+    background-color: gray;
+    overflow-y: hidden scroll;
+}
+
+header { 
+    display: flex;
+    grid-area: hd;
+    background-color: darkslateblue;
+    color: white;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+main {
+    grid-area: mn;
+    background-color: white;
+}
+
+aside {
+    grid-area as;
+    background-color: darkslateblue;
+}
+
+nav {
+    grid-area: nv;
+    background-color: darkslateblue;
+}
+
+footer {
+    grid-area: ft;
+    background-color: darkslateblue;
+}
