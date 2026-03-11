@@ -5,12 +5,6 @@
 body {
     height: 100vh;
     display: grid;
-    grid-template-columns: 1fr 6fr 1fr;
-    grid-template-rows: 10vh auto 5vh;
-    grid-template-areas: 
-    'hd hd hd'
-    'as mn nv'
-    'ft ft ft';
     column-gap: 2px;
     background-color: lightgray;
     overflow-y: hidden scroll;
@@ -24,13 +18,17 @@ header {
     align-items: center;
     justify-content: space-between;
     padding-left: 10px;
-    padding-right: 60px;
 }
 
 main {
     grid-area: mn;
     background-color: white;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+main p {
+    margin: 20px 0 20px 0;
+    font-size: 21px;
 }
 
 aside {
@@ -66,7 +64,7 @@ footer {
     text-decoration: none;
 }
 
-#rel-links a, .menu-links {
+.menu-links {
     color: white;
     text-decoration: none;
     font-size: 34px;
@@ -124,9 +122,6 @@ nav a {
 .menu-button {
     background-color: darkslateblue;
     color: white;
-    width: 200px;
-    height: 50px;
-    border-radius: 12px;
     align-content: center;
     justify-items: center;
     cursor: pointer;
@@ -134,7 +129,7 @@ nav a {
 
 .menu{
     height: 100vh;
-    width: 12.5vw;
+    width: 11.5vw;
     background: darkslateblue;
     position: fixed;
     top: 0;
@@ -162,4 +157,76 @@ nav a {
 
 .fade-layer.visible{
     display: block;
+}
+
+#menu-icon {
+    width: 50px;
+    height: 50px;
+}
+
+main::-webkit-scrollbar {
+    width: 8px;
+}
+
+main::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+main::-webkit-scrollbar-thumb {
+    background-color: rgb(72, 61, 139, 0.75);
+    border-radius: 4px;
+}
+
+/* MOBILE */
+@media screen and (max-width: 530px) {
+    body {
+    height: 100vh;
+    grid-template-columns: 100vw;
+    grid-template-rows: 10vh auto 5vh;
+    grid-template-areas: 
+    'hd'
+    'mn'
+    'ft';
+    }
+
+    #brand-name {
+        font-size: 21px;
+    }
+
+    header {
+        padding-right: 10px;
+    }
+
+    .menu {
+        width: 50vw;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    #about-us-image {
+        width: 400px;
+    }
+}
+
+/* DESKTOP */
+@media screen and (min-width: 530px) {
+    body {
+    grid-template-columns: 1fr 6fr 1fr;
+    grid-template-rows: 10vh auto 5vh;
+    grid-template-areas: 
+    'hd hd hd'
+    'as mn nv'
+    'ft ft ft';
+    }
+
+    header {
+    padding-right: 50px;
+    }
+
+    main {
+        padding: 0 260px 10px 20px;
+        overflow: hidden scroll;
+    }
 }
