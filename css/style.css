@@ -37,7 +37,6 @@ aside {
     font-family: Arial, Helvetica, sans-serif;
     padding: 20px;
     background-image: url("/img/texture.jpg");
-    background-repeat:;
 }
 
 nav {
@@ -177,6 +176,20 @@ main::-webkit-scrollbar-thumb {
     border-radius: 4px;
 }
 
+.cards {
+    width: 500px;
+    height: 400px;
+    background-image: url("/img/texture.jpg");
+    margin: 20px
+}
+
+.main-p {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
 /* MOBILE */
 @media screen and (max-width: 530px) {
     body {
@@ -187,6 +200,14 @@ main::-webkit-scrollbar-thumb {
     'hd'
     'mn'
     'ft';
+    }
+    
+    aside {
+        display: none;
+    }
+
+    nav {
+        display: none;
     }
 
     #brand-name {
@@ -206,27 +227,31 @@ main::-webkit-scrollbar-thumb {
     }
 
     #about-us-image {
-        width: 400px;
+        width: 370px;
     }
 }
 
 /* DESKTOP */
 @media screen and (min-width: 530px) {
     body {
-    grid-template-columns: 1fr 6fr 1fr;
-    grid-template-rows: 10vh auto 5vh;
-    grid-template-areas: 
-    'hd hd hd'
-    'as mn nv'
-    'ft ft ft';
+        grid-template-columns: 1fr 6fr 1fr;
+        grid-template-rows: 10vh auto 5vh;
+        grid-template-areas: 
+        'hd hd hd'
+        'as mn nv'
+        'ft ft ft';
     }
 
     header {
-    padding-right: 50px;
+        padding-right: 50px;
     }
 
     main {
         padding: 0 260px 10px 20px;
         overflow: hidden scroll;
+    }
+
+    #about-us-image {
+        margin-left: 220px;
     }
 }
