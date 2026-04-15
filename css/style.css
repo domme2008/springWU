@@ -180,7 +180,8 @@ main::-webkit-scrollbar-thumb {
     width: 500px;
     height: 400px;
     background-image: url("/img/texture.jpg");
-    margin: 20px
+    margin: 20px;
+    border-radius: 16px;
 }
 
 .main-p {
@@ -188,6 +189,18 @@ main::-webkit-scrollbar-thumb {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-evenly;
+}
+
+.cards img {
+    width: 500px;
+    height: 300px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+
+.cards h1 {
+    justify-self: center;
+    margin-top: 20px;
 }
 
 /* MOBILE */
@@ -201,9 +214,9 @@ main::-webkit-scrollbar-thumb {
     'mn'
     'ft';
     }
-    
+
     aside {
-        display: none;
+        display: contents;
     }
 
     nav {
@@ -228,6 +241,16 @@ main::-webkit-scrollbar-thumb {
 
     #about-us-image {
         width: 370px;
+    }
+
+    .cards {
+        width: 350px;
+        height: 350px;
+    }
+
+    .cards img {
+        width: 350px;
+        height: 250px;
     }
 }
 
